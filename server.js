@@ -7,14 +7,14 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const sequelize = require("./config/connection");
-const SqeuelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
     secret: 'super secret',
     cookie: {},
     resave: false,
     saveUninitialized: true,
-    store: new SqeuelizeStore({
+    store: new SequelizeStore({
         db: sequelize
     })
 };

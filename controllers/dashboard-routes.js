@@ -15,7 +15,7 @@ router.get('/', withAuth, (req, res) => {
       'id',
       'post_data',
       'title',
-      'created_at'
+      'created_at',
     ],
     include: [
       {
